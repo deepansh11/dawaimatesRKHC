@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(204, 245, 255);
+    margin: 0;
+    padding: 65px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: scroll;
+}
+
+.form-floating{
+    margin: 10px;
+}
+
+#loginButton{
+    margin: 20px;
+}
+

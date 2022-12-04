@@ -1,0 +1,60 @@
+{% extends 'main.html'%}
+{% load static %}
+
+{% block content %}
+
+<main class="container main">
+
+    <section class="h-100">
+        <div class="container py-5 h-100">            
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow" style="border-radius: 1rem;">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
+                    <p class="mb-5 text-center">Dawai Mates RKCH Dashboard.</p>
+      
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>     
+                    <button id='loginButton' class="btn btn-outline-success btn-lg px-5 mt-2" type="submit" onclick="loginCheck();">Login</button>      
+                  </div>      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="loginFail" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Login Failed</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="" >
+                <span class="text-danger">Wrong Credentials!</span>
+                <small>Please check your email and password</small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="loginSuccess" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Login Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="" >
+                Logged in Successfully, Redirecting to the Dashboard.
+            </div>
+        </div>
+    </div>
+    
+</main>
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock content %}
